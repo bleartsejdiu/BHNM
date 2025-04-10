@@ -244,3 +244,77 @@ section h1, section h2, section h3 {
 .about-us .logo img {
     max-width: 100px;
 }
+
+.contact-us {
+    padding: 50px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.send-btn {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.send-btn:hover {
+    background: #333;
+}
+
+
+
+  footer {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        display: flex ;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4px;      
+        
+    }
+
+    footer .f1 {
+        color: white ;
+        text-decoration-style: none ;
+        font-size: 65px ;
+    }
