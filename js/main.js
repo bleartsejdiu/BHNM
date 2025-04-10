@@ -1,8 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
-    const navUl = document.querySelector('nav ul');
+    const sidebarMenu = document.querySelector('.sidebar-menu');
+    const closeBtn = document.querySelector('.close-btn');
 
-    menuToggle.addEventListener('click', function() {
-        navUl.classList.toggle('active');
+    menuToggle.addEventListener('click', () => {
+        sidebarMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        sidebarMenu.classList.remove('active');
     });
 });
