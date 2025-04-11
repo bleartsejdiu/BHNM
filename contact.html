@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact BHNM</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="Icon" type="jpg" href="img/BNHM.jpg">
 </head>
@@ -17,11 +18,16 @@
     <div class="menu-toggle">&#9776;</div>
     <a href="index.html"><h1 class="rotate-logo">BHNM</h1></a>
 
-    <div class="icons">
-            <i class="fa-solid fa-magnifying-glass" ></i>
-            <i class="fa-solid fa-bag-shopping" ></i>
-            <i class="fa-solid fa-bag-shopping" ></i>
-        </div>
+   <div class="search-icon">
+    <i class="fas fa-search"></i>
+  </div>
+
+  <div id="searchOverlay" class="search-overlay hidden">
+    <div class="search-box">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search..." />
+      <button class="btn btn-primary" onclick="performSearch()"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
 
 <div class="sidebar-menu">
     <span class="close-btn">&times;</span>
@@ -84,7 +90,8 @@
 
 
 
-
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </body>

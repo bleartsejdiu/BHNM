@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="Icon" type="jpg" href="img/BNHM.jpg">
     <title>BHNM Website</title>
 </head>
@@ -15,11 +16,18 @@
     <div class="menu-toggle" >&#9776;</div>
     <a href="#"><h1 class="rotate-logo">BHNM</h1></a>
 
-        <div class="icons">
-            <i class="fa-solid fa-magnifying-glass" ></i>
-            <i class="fa-solid fa-bag-shopping" ></i>
-            <i class="fa-solid fa-bag-shopping" ></i>
-        </div>
+
+    <div class="search-icon">
+    <i class="fas fa-search"></i>
+  </div>
+
+  <div id="searchOverlay" class="search-overlay hidden">
+    <div class="search-box">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search..." />
+      <button class="btn btn-primary" onclick="performSearch()"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
 
 <div class="sidebar-menu" >
     <span class="close-btn">&times;</span>
@@ -55,33 +63,29 @@
           <h2 class="h2-new">NEW ARRIVALS</h2>
     </section>
         <div class="products-grid">
-            <div class="product-card">
-                <span class="new">New</span>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Abc Camo Shark Full Zip Hoodie" data-price="449.50€" data-image="img/bape1.jpg" data-description="Relaxed fit hoodie with camo design.">
                 <img src="img/bape1.jpg" >
                 <p>Abc Camo Shark Full Zip Hoodie</p>
-                <h6>489,50€</h6>
-                <h5>449,50€</h5>
+                <h6>489.50€</h6>
+                <h5>449.50€</h5>
             </div>
-            <div class="product-card">
-                <span class="new">New</span>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM 1st Camo Shark Slim Sweatpants 'Green'" data-price="340.50€" data-image="img/bape2.jpg" data-description="Regular fit sweat pants with camo design.">
                 <img src="img/bape2.jpg" >
                 <p>BHNM 1st Camo Shark Slim Sweatpants 'Green'</p>
                 <h6>395.50€</h6>
                 <h5>340.50€</h5>
             </div>
-            <div class="product-card">
-                <span class="new">New</span>
-                <img src="img/bape4.jpg">
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Abc Camo Nylon Hooded Jacket" data-price="2,399.50€" data-image="img/bape4.jpg" data-description="Nylon hooded jacket with camo design.">
+                <img src="img/bape4.jpg" >
                 <p>Abc Camo Nylon Hooded Jacket</p>
                 <h6>2,699.50€</h6>
                 <h5>2,399.50€</h5>
             </div>
-            <div class="product-card">
-                <span class="new">New</span>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM STA #1 MENS" data-price="250.00€" data-image="img/bape9.png" data-description="Stylish sneakers for men.">
                 <img src="img/bape9.png" >
                 <p>BHNM X Suicoke Sandals</p>
                 <h6>309.50€</h6>
-                <h5>110.00€</h5>
+                <h5>250.50€</h5>
             </div>
         </div>
 
@@ -127,8 +131,11 @@
       </div>
     </div>
   </div>
+
 <br>    
 <br>    
+    <hr>
+
 
 <ul class="brand-logos">
   <li><img src="img/bapelogo.jpg"></li>
@@ -138,6 +145,28 @@
   <li><img src="img/lacoste.png" style="max-height:130px;"></li>
   <li><img src="img/stussy.jpg" style="max-height:130px;"></li>
 </ul>
+
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="img-fluid" alt="Product Image">
+                <h3 id="modalName"></h3>
+                <p id="modalDescription"></p>
+                <h4 id="modalPrice"></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-darker" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <footer class="f1">
@@ -150,7 +179,8 @@
 
 
 
-
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

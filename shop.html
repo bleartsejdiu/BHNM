@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shop - BHNM</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link rel="Icon" type="jpg" href="img/BNHM.jpg">
 </head>
@@ -16,11 +17,17 @@
         <nav class="nav1">
     <div class="menu-toggle">&#9776;</div>
     <a href="index.html"><h1 class="rotate-logo">BHNM</h1></a>
-    <div class="icons">
-            <i class="fa-solid fa-magnifying-glass" ></i>
-            <i class="fa-solid fa-bag-shopping" ></i>
-            <i class="fa-solid fa-bag-shopping" ></i>
-        </div>
+
+    <div class="search-icon">
+    <i class="fas fa-search"></i>
+  </div>
+
+  <div id="searchOverlay" class="search-overlay hidden">
+    <div class="search-box">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search..." />
+      <button class="btn btn-primary" onclick="performSearch()"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
 
 <div class="sidebar-menu">
     <span class="close-btn">&times;</span>
@@ -43,26 +50,26 @@
           <p class="h2-new">PRODUCTS</p>
     </section>
         <div class="products-grid">
-            <div class="product-card">
-                <img src="img/f4.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Astro Bomber Jacket" data-price="330.50€" data-image="img/f4.png" data-description="High-quality bomber jacket with a sleek design.">
+                <img src="img/f4.png" alt="Astro Bomber Jacket">
                 <p>Astro Bomber Jacket</p>
                 <h6>400.50€</h6>
                 <h5>330.50€</h5>
             </div>
-                 <div class="product-card">
-                <img src="img/f6.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Knit Pants - Black" data-price="160.50€" data-image="img/f6.png" data-description="Comfortable knit pants in black.">
+                <img src="img/f6.png" alt="Knit Pants - Black">
                 <p>Knit Pants - Black</p>
                 <h6>205.50€</h6>
                 <h5>160.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f14.png">
-                <p>BHNM Hoodie "Black"</p>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM Hoodie 'Black'" data-price="140.50€" data-image="img/f14.png" data-description="Stylish black hoodie with a comfortable fit.">
+                <img src="img/f14.png" alt="BHNM Hoodie 'Black'">
+                <p>BHNM Hoodie 'Black'</p>
                 <h6>160.50€</h6>
                 <h5>140.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape3.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM STA #1 M1" data-price="210.00€" data-image="img/bape3.png" data-description="Unique design sneakers with premium materials.">
+                <img src="img/bape3.png" alt="BHNM STA #1 M1">
                 <p>BHNM STA #1 M1</p>
                 <h6>240.50€</h6>
                 <h5>210.00€</h5>
@@ -73,26 +80,26 @@
         <br>
 
         <div class="products-grid">
-            <div class="product-card">
-                <img src="img/bape5.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Abc Camo Crochet Relaxed Fit Shark Full Zip Hoodie" data-price="449.50€" data-image="img/bape5.png" data-description="Relaxed fit hoodie with camo design.">
+                <img src="img/bape5.png" alt="Abc Camo Crochet Relaxed Fit Shark Full Zip Hoodie">
                 <p>Abc Camo Crochet Relaxed Fit Shark Full Zip Hoodie</p>
                 <h6>489.50€</h6>
                 <h5>449.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape6.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Abc Camo Shark Regular Fit Sweat Pants" data-price="340.50€" data-image="img/bape6.png" data-description="Regular fit sweat pants with camo design.">
+                <img src="img/bape6.png" alt="Abc Camo Shark Regular Fit Sweat Pants">
                 <p>Abc Camo Shark Regular Fit Sweat Pants</p>
                 <h6>395.50€</h6>
                 <h5>340.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape7.png">
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Abc Camo Nylon Hooded Jacket" data-price="2,399.50€" data-image="img/bape7.png" data-description="Nylon hooded jacket with camo design.">
+                <img src="img/bape7.png" alt="Abc Camo Nylon Hooded Jacket">
                 <p>Abc Camo Nylon Hooded Jacket</p>
                 <h6>2,699.50€</h6>
                 <h5>2,399.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape8.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM STA #1 MENS" data-price="110.00€" data-image="img/bape8.png" data-description="Stylish sneakers for men.">
+                <img src="img/bape8.png" alt="BHNM STA #1 MENS">
                 <p>BHNM STA #1 MENS</p>
                 <h6>309.50€</h6>
                 <h5>110.00€</h5>
@@ -103,26 +110,26 @@
         <br>
         
         <div class="products-grid">
-            <div class="product-card">
-                <img src="img/f1.png" >
-                <p>Astronaut Bomber „Light Grey“</p>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Astronaut Bomber 'Light Grey'" data-price="449.50€" data-image="img/f1.png" data-description="Light grey bomber jacket with astronaut design.">
+                <img src="img/f1.png" alt="Astronaut Bomber 'Light Grey'">
+                <p>Astronaut Bomber 'Light Grey'</p>
                 <h6>489.50€</h6>
                 <h5>449.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f2.png" >
-                <p>Pillow Pants „Light Grey“</p>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Pillow Pants 'Light Grey'" data-price="310.50€" data-image="img/f2.png" data-description="Comfortable pillow pants in light grey.">
+                <img src="img/f2.png" alt="Pillow Pants 'Light Grey'">
+                <p>Pillow Pants 'Light Grey'</p>
                 <h6>345.50€</h6>
                 <h5>310.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f3.png">
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Knit Hoodie - Black" data-price="190.50€" data-image="img/f3.png" data-description="Black knit hoodie with a comfortable fit.">
+                <img src="img/f3.png" alt="Knit Hoodie - Black">
                 <p>Knit Hoodie - Black</p>
                 <h6>230.50€</h6>
                 <h5>190.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape10.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM STA M1" data-price="285.50€" data-image="img/bape10.png" data-description="Stylish sneakers with a unique design.">
+                <img src="img/bape10.png" alt="BHNM STA M1">
                 <p>BHNM STA M1</p>
                 <h6>320.50€</h6>
                 <h5>285.50€</h5>
@@ -133,26 +140,26 @@
         <br>
 
         <div class="products-grid">
-            <div class="product-card">
-                <img src="img/f9.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Knit Hoodie - Brown" data-price="190.50€" data-image="img/f9.png" data-description="Brown knit hoodie with a comfortable fit.">
+                <img src="img/f9.png" alt="Knit Hoodie - Brown">
                 <p>Knit Hoodie - Brown</p>
                 <h6>220.50€</h6>
                 <h5>190.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f10.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Knit Pants - Brown" data-price="160.50€" data-image="img/f10.png" data-description="Comfortable knit pants in brown.">
+                <img src="img/f10.png" alt="Knit Pants - Brown">
                 <p>Knit Pants - Brown</p>
                 <h6>180.50€</h6>
                 <h5>160.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f7.png">
-                <p>BHNM Sweater "Light Brown"</p>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM Sweater 'Light Brown'" data-price="110.50€" data-image="img/f7.png" data-description="Light brown sweater with a comfortable fit.">
+                <img src="img/f7.png" alt="BHNM Sweater 'Light Brown'">
+                <p>BHNM Sweater 'Light Brown'</p>
                 <h6>140.50€</h6>
                 <h5>110.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape11.png" >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM Flip STA #1 M2" data-price="405.00€" data-image="img/bape11.png" data-description="Unique design flip flops.">
+                <img src="img/bape11.png" alt="BHNM Flip STA #1 M2">
                 <p>BHNM Flip STA #1 M2</p>
                 <h6>420.50€</h6>
                 <h5>405.00€</h5>
@@ -163,26 +170,26 @@
         <br>
 
         <div class="products-grid">
-            <div class="product-card">
-                <img src="img/f12.png" >
-                <p>BHNM Hoodie "Pink"</p>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM Hoodie 'Pink'" data-price="140.50€" data-image="img/f12.png" data-description="Pink hoodie with a comfortable fit.">
+                <img src="img/f12.png" alt="BHNM Hoodie 'Pink'">
+                <p>BHNM Hoodie 'Pink'</p>
                 <h6>160.50€</h6>
                 <h5>140.50€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f11.png" >
-                <p  >BHNM Shorts "Pink"</p>
-                <h6>100€</h6>
-                <h5>80€</h5>
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM Shorts 'Pink'" data-price="80.00€" data-image="img/f11.png" data-description="Pink shorts with a comfortable fit.">
+                <img src="img/f11.png" alt="BHNM Shorts 'Pink'">
+                <p>BHNM Shorts 'Pink'</p>
+                <h6>100.00€</h6>
+                <h5>80.00€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/f13.png"  >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Teddy Beanie - Pink" data-price="40.00€" data-image="img/f13.png" data-description="Pink teddy beanie.">
+                <img src="img/f13.png" alt="Teddy Beanie - Pink">
                 <p>Teddy Beanie - Pink</p>
-                <h6>60€</h6>
-                <h5>40€</h5>
+                <h6>60.00€</h6>
+                <h5>40.00€</h5>
             </div>
-            <div class="product-card">
-                <img src="img/bape12.png"  >
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM X Cactus Jack X Don Toliver Road STA M2" data-price="405.00€" data-image="img/bape12.png" data-description="Collaboration sneakers with Cactus Jack and Don Toliver.">
+                <img src="img/bape12.png" alt="BHNM X Cactus Jack X Don Toliver Road STA M2">
                 <p>BHNM X Cactus Jack X Don Toliver Road STA M2</p>
                 <h6>420.50€</h6>
                 <h5>405.00€</h5>
@@ -191,6 +198,8 @@
 
     </main>
 </section>
+    
+    <hr>
 
 <ul class="brand-logos">
   <li><img src="img/bapelogo.jpg"></li>
@@ -200,6 +209,27 @@
   <li><img src="img/lacoste.png" style="max-height:130px;"></li>
   <li><img src="img/stussy.jpg" style="max-height:130px;"></li>
 </ul>
+
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="img-fluid" alt="Product Image">
+                <h3 id="modalName"></h3>
+                <p id="modalDescription"></p>
+                <h4 id="modalPrice"></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-darker" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="f1">
     <p>&copy; 2025 BHNM. All rights reserved.</p>
@@ -211,6 +241,8 @@
 
 
 
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
