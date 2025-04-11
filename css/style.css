@@ -42,6 +42,11 @@ nav {
 }
 
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav ul li {
     cursor: pointer;
 }
@@ -56,11 +61,10 @@ nav a {
     color: white;
 }
 
+
 .icons {
     display: flex;
-    gap: 30px;
-    font-size: 2;
-    cursor: pointer;
+    gap: 15px;
 }
 
 .sidebar-menu {
@@ -258,7 +262,7 @@ section {
     border-radius: 10px;
 }
 
-.product-card .off {
+.product-card .new {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -311,8 +315,6 @@ section {
 .view-all-btn:focus {
     outline: none; 
 }
-
-
 
 
  .about-container {
@@ -469,44 +471,44 @@ input, textarea {
 }
 
 .brand-section {
-      padding: 40px 20px;
-    }
+    padding: 40px 20px;
+}
 
-    .brand-logos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px;
-      list-style: none;
-      cursor: pointer;
-    }
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+    cursor: pointer;
+}
 
-    .brand-logos li {
-      border: 2px solid #eee;
-      border-radius: 12px;
-      padding: 20px;
-      flex: 1 1 150px;
-      max-width: 180px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
+.brand-logos li {
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 150px;
+    max-width: 180px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
 
-    .brand-logos li:hover {
-      transform: scale(1.05);
-    }
+.brand-logos li:hover {
+    transform: scale(1.05);
+}
 
-    .brand-logos img {
-      max-height: 40px;
-      max-width: 100%;
-      object-fit: contain;
-    }
+.brand-logos img {
+    max-height: 70px;
+    max-width: 100%;
+    object-fit: contain;
+}
 
 footer {
     background-color: black;
@@ -538,7 +540,7 @@ footer .f1 {
         @media (min-width: 230px) and (max-width:768px) {
 
             header{
-              margin-bottom: -560px;
+              margin-bottom: -530px;
 
             }
 
@@ -566,7 +568,7 @@ footer .f1 {
               .top-text {
                   position: absolute;
                   top: 50%; left: 50%;
-                  transform: translate(-50%, -220%);
+                  transform: translate(-50%, -205%);
                   text-align: center;
                   color: #fff;
                   font-size: 16px;
@@ -612,7 +614,7 @@ footer .f1 {
             }
 
             .brand-logos img {
-                 max-height: 30px;
+                 max-height: 60px;
             }
             
         }

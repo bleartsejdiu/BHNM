@@ -11,3 +11,4 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebarMenu.classList.remove('active');
     });
 });
+
