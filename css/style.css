@@ -38,7 +38,7 @@ nav {
     position: absolute;
     width: 100%;
     z-index: 1;
-    
+
 }
 
 
@@ -65,6 +65,7 @@ nav a {
 .icons {
     display: flex;
     gap: 15px;
+    cursor: pointer;
 }
 
 .sidebar-menu {
@@ -110,9 +111,11 @@ nav a {
     letter-spacing: 1px;
 }
 
+
 .menu-toggle {
     font-size: 40px;
     cursor: pointer;
+    margin-right: 20px; 
 }
 
 section {
@@ -126,7 +129,10 @@ section {
     color: white;
     animation: rotate360 5s linear infinite;
     cursor: pointer;
+    flex-grow: 1; 
+    text-align: center;
 }
+
 
 @keyframes rotate360 {
     from {
@@ -155,41 +161,44 @@ section {
 }
 
 .top-text {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -90%);
-  text-align: center;
-  color: #fff;
-  padding: 24px;
-  border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    text-align: center;
+    color: #fff;
+    padding: 24px;
+    border-radius: 8px;
 }
 
 .top-text h1 {
-  margin: 0;
-  font-size: 40px;
-  line-height: 1.2;
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.2;
 }
+
 .top-text h1 span {
-  display: block;
-  font-size: 48px;
-  font-weight: bold;
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
 }
 
 .shop-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding:9.6px 19.2px;
-  background: transparent;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border: 1px solid white;
-  transition: background .3s;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 9.6px 19.2px;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid white;
+    transition: background .3s;
 }
+
 .shop-btn:hover {
-  background: black;
-  color: white;
-  border: 1px solid black;
+    background: black;
+    color: white;
+    border: 1px solid black;
 }
 
 section {
