@@ -969,6 +969,10 @@ footer .f1 {
             .feature p {
                 font-size: 15px;
             }
+
+            .top-text h1 {
+                display: none;
+            }
         }
 
         @media (min-width:890px ) and (max-width: 1159px) {
