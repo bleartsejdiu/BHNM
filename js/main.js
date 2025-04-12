@@ -97,7 +97,10 @@ function addToCart() {
 }
 
 function checkout() {
-    alert("Payment was successful!");
+    // Show the payment success modal
+    $('#paymentSuccessModal').modal('show');
+
+    // Clear the cart
     document.getElementById("cartItems").innerHTML = "";
     document.getElementById("cartTotal").innerText = "0.00€";
     document.getElementById("checkoutBtn").style.display = "none";
