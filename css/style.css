@@ -29,6 +29,8 @@ header {
     margin-bottom: -620px !important;
 }
 
+
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -867,12 +869,10 @@ footer .f1 {
                 height: 50% !important;
             }
 
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
 
-            .products {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            
             .about-header {
                 flex-direction: column;
                 text-align: center;
@@ -942,7 +942,7 @@ footer .f1 {
 
         @media (min-width: 1025px) {
             .menu-toggle {
-                display: none !important;
+                display:  !important;
             }
         }
 
