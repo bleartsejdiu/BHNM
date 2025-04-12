@@ -68,7 +68,6 @@ nav a {
     cursor: pointer !important;
 }
 
-/* IKONA E SHPORTËS */
     .cart-icon {
       position: fixed;
       top: 20px;
@@ -566,28 +565,28 @@ section {
 }
 
 .feature img {
-    width: 50px !important;
-    height: 50px !important;
-    margin-bottom: 15px !important;
+    width: 50px ;
+    height: 50px ;
+    margin-bottom: 15px ;
 }
 
 .feature h3 {
-    font-size: 18px !important;
-    font-weight: bold !important;
-    margin-bottom: 10px !important;
+    font-size: 18px ;
+    font-weight: bold ;
+    margin-bottom: 10px ;
 }
 
 .feature p {
-    font-size: 15px !important;
-    color: #555 !important;
-    line-height: 1.5 !important;
+    font-size: 15px ;
+    color: #555 ;
+    line-height: 1.5 ;
 }
 
 
 .contact-section {
     max-width: 1100px !important;
     margin: 50px auto !important;
-    padding: 0 20p !importantx;
+    padding: 0 20px !important;
     font-family: Arial, sans-serif !important;
 }
 
