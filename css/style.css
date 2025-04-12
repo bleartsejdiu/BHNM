@@ -18,7 +18,7 @@ header {
     position: relative !important;
     height: 100vh !important;
     overflow: hidden !important;
-    margin-bottom: -700px !important;
+    margin-bottom: -630px !important;
 
 }
 
@@ -26,7 +26,7 @@ header {
     position: relative !important;
     height: 100vh !important;
     overflow: hidden !important;
-    margin-bottom: -650px !important;
+    margin-bottom: -620px !important;
 }
 
 nav {
@@ -68,17 +68,108 @@ nav a {
     cursor: pointer !important;
 }
 
+/* IKONA E SHPORTËS */
+    .cart-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .cart-icon .count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: black;
+      color: white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      text-align: center;
+      line-height: 18px;
+    }
+
+   #cartSidebar {
+    visibility: hidden;
+   }
+
+#cartSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1000; 
+    overflow-y: scroll;
+}
+
+.cart-sidebar.visible {
+    display: flex; 
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info p {
+    margin: 5px 0;
+}
+
+.cart-item-info .price {
+    font-weight: bold;
+    color: black;
+}
+
+#checkoutBtn {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#checkoutBtn:hover {
+    background-color: #333;
+}
+
 .search-icon {
-      position: fixed !important;
-      top: 20px !important;
-      right: 80px !important;
-      font-size: 15px !important;
-      cursor: pointer !important;
-      z-index: 1000 !important;
-      color: black !important;
-      background: white !important;
-      padding: 10px 14px !important;
-      border-radius: 50px !important;
+      position: fixed ;
+      top: 20px ;
+      right: 80px ;
+      font-size: 15px ;
+      cursor: pointer ;
+      z-index: 1000 ;
+      color: black ;
+      background: white ;
+      padding: 10px 14px ;
+      border-radius: 50px ;
     }
 
     .search-overlay {
@@ -125,7 +216,7 @@ nav a {
     position: fixed !important;
     top: 0 !important;
     left: -120% !important;
-    width: 35% !important;
+    width: 40% !important;
     height: 100% !important;
     background-color: white !important;
     color: black !important;
@@ -197,14 +288,14 @@ section {
 }
 
 .video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-    margin-bottom: 0; 
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    z-index: -1 !important;
+    margin-bottom: 0 !important; 
 }
 
 .video-container video {
@@ -237,21 +328,21 @@ section {
 }
 
 .shop-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 9.6px 19.2px;
-    background: transparent;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid white;
-    transition: background .3s;
+    display: inline-block !important;
+    margin-top: 16px !important;
+    padding: 9.6px 19.2px !important;
+    background: transparent !important;
+    color: white !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border: 1px solid white !important;
+    transition: background .3s !important;
 }
 
 .shop-btn:hover {
-    background: black;
-    color: white;
-    border: 1px solid black;
+    background: black !important;
+    color: white !important;
+    border: 1px solid black !important;
 }
 
 section {
@@ -352,31 +443,31 @@ section {
 }
 
 .view-all-btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px !important;
+    padding: 12px 25px !important;
+    background: black !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    border-radius: 5px !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
 }
 
 .view-all-btn:hover {
-    background: white;
-    color: black;
-    border: 1px solid black;
-    transform: scale(1.05); 
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    transform: scale(1.05) !important; 
 }
 
 .view-all-btn:active {
-    background: #111;
-    transform: scale(1); 
+    background: #111 !important;
+    transform: scale(1) !important; 
 }
 
 .view-all-btn:focus {
-    outline: none; 
+    outline: none !important; 
 }
 
 
@@ -471,99 +562,99 @@ section {
 }
 
 .feature:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) !important;
 }
 
 .feature img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
+    width: 50px !important;
+    height: 50px !important;
+    margin-bottom: 15px !important;
 }
 
 .feature h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
 }
 
 .feature p {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.5;
+    font-size: 15px !important;
+    color: #555 !important;
+    line-height: 1.5 !important;
 }
 
 
 .contact-section {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
+    max-width: 1100px !important;
+    margin: 50px auto !important;
+    padding: 0 20p !importantx;
+    font-family: Arial, sans-serif !important;
 }
 
 .contact-section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: black;
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+    color: black !important;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;  
+    flex-direction: column !important;
 }
 
 .form-row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
 }
 
 .form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
 }
 
 .full-width {
-    width: 100%;
-    margin-top: 20px;
+    width: 100% !important;
+    margin-top: 20px !important;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 8px;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
 }
 
 input, textarea {
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    resize: none;
+    padding: 12px !important;
+    font-size: 16px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 2px !important;
+    resize: none !important;
 }
 
 .required {
-    position: absolute;
-    right: 10px;
-    top: 38px;
-    color: red;
-    font-size: 18px;
+    position: absolute !important;
+    right: 10px !important;
+    top: 38px !important;
+    color: red !important;
+    font-size: 18px !important;
 }
 
  .submit-button {
-    margin-top: 30px;
-    padding: 15px 30px;
-    background: black;
-    color: white;
+    margin-top: 30px !important;
+    padding: 15px 30px !important;
+    background: black !important;
+    color: white !important;
     border: none;
-    font-size: 16px;
-    cursor: pointer;
-    width: 180px;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    width: 180px !important;
 }
 
 .submit-button:hover {
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
 }
 
 .brand-section {
@@ -636,71 +727,71 @@ footer .f1 {
         @media (min-width: 230px) and (max-width:768px) {
 
             header{
-              margin-bottom: -530px !important;
+              margin-bottom: -460px !important;
 
             }
 
             .header1 {
-              margin-bottom: -500px !important;
+              margin-bottom: -450px !important;
 
             }
 
             .header2 {
-              margin-bottom: -700px !important;
+              margin-bottom: -550px !important;
 
             }
               .about-text h1 {
-                font-size: 28px;
+                font-size: 28px !important;
               }
 
               .feature h3 {
-                font-size: 16px;
+                font-size: 16px !important;
               }
 
               .feature p {
-                font-size: 14px;
+                font-size: 14px !important;
               }
 
               .top-text {
-                  position: absolute;
-                  top: 50%; left: 50%;
-                  transform: translate(-50%, -205%);
-                  text-align: center;
-                  color: #fff;
-                  font-size: 16px;
-                  padding: 16px;
-                  border-radius: 8px;
+                  position: absolute !important;
+                  top: 50%; left: 50% !important;
+                  transform: translate(-50%, -205%) !important;
+                  text-align: cente !importantr;
+                  color: #fff !important;
+                  font-size: 16px !important;
+                  padding: 16px !important;
+                  border-radius: 8px !important;
                 }
 
                 .top-text h1 span {
-                  display: block;
-                  font-size: 16px;
-                  font-weight: bold;
+                  display: block !important;
+                  font-size: 16px !important;
+                  font-weight: bold !important;
                 }
 
                 .top-text h1 {
-                    font-size: 16px;
+                    font-size: 16px !important;
                 }
 
                 .shop-btn {
-                  display: inline-block;
-                  margin-top: 16px;
-                  padding: 9.6px 19.2px;
-                  background: transparent;
-                  color: white;
-                  font-weight: bold;
-                  text-decoration: none;
-                  border: 1px solid white;
-                  transition: background .3s;
+                  display: inline-block !important;
+                  margin-top: 16px !important;
+                  padding: 9.6px 19.2px !important;
+                  background: transparent !important;
+                  color: white !important;
+                  font-weight: bold !important;
+                  text-decoration: none !important;
+                  border: 1px solid white !important;
+                  transition: background .3s !important;
                 }
                 .shop-btn:hover {
-                  background: black;
-                  color: white;
-                  border: 1px solid black;
+                  background: black !important;
+                  color: white !important;
+                  border: 1px solid black !important;
                 }
 
                 .brand-logos {
-                justify-content: space-around;
+                justify-content: space-around !important;
               }
 
             .brand-logos li {
@@ -722,12 +813,12 @@ footer .f1 {
             }
 
             .header1 {
-              margin-bottom: -700px !important;
+              margin-bottom: -600px !important;
 
             }
 
             .video-container {
-                height: 50%;
+                height: 50% !important;
             }
 
 
@@ -778,7 +869,7 @@ footer .f1 {
 
 
             .video-container {
-                height: 50%;
+                height: 50% !important;
             }
 
             .about-header {
@@ -819,3 +910,4 @@ footer .f1 {
              }
 
         }
+
