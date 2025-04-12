@@ -836,6 +836,10 @@ footer .f1 {
                     border-bottom: 1px solid black; 
                     width: 76%;
                 }
+
+                .top-text h1 {
+                    visibility:hidden;  
+                  }
                 
             }
 
