@@ -29,6 +29,24 @@
     </div>
   </div>
 
+  <div class="cart-icon" id="cartIcon">
+    🛍️
+    <div class="count" id="cartCount">0</div>
+</div>
+
+<div class="cart-sidebar hidden" id="cartSidebar">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total">
+        <h4>Total: <span id="cartTotal">0.00€</span></h4>
+    </div>
+    <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+</div>
+
+
+
 <div class="sidebar-menu">
     <span class="close-btn">&times;</span>
     <ul>
@@ -95,8 +113,8 @@
             <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="Abc Camo Nylon Hooded Jacket" data-price="2,399.50€" data-image="img/bape7.png" data-description="Nylon hooded jacket with camo design.">
                 <img src="img/bape7.png" alt="Abc Camo Nylon Hooded Jacket">
                 <p>Abc Camo Nylon Hooded Jacket</p>
-                <h6>2,699.50€</h6>
-                <h5>2,399.50€</h5>
+                <h6>955.50€</h6>
+                <h5>925.50€</h5>
             </div>
             <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM STA #1 MENS" data-price="110.00€" data-image="img/bape8.png" data-description="Stylish sneakers for men.">
                 <img src="img/bape8.png" alt="BHNM STA #1 MENS">
@@ -225,11 +243,14 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-darker" onclick="addToCart()">Add to Cart</button>
+                 <button type="button" class="btn btn-darker" onclick="addToCart()">Add to Shopping Cart</button>
+
             </div>
         </div>
     </div>
 </div>
+
+
 
 <footer class="f1">
     <p>&copy; 2025 BHNM. All rights reserved.</p>
