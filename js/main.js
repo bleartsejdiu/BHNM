@@ -59,7 +59,6 @@ function addToCart() {
     const image = document.getElementById("modalImage").src;
     const description = document.getElementById("modalDescription").innerText;
 
-    // Remove the € symbol and convert the price to a float
     const price = parseFloat(priceText.replace("€", "").trim());
 
     const cartItems = document.getElementById("cartItems");
@@ -77,17 +76,14 @@ function addToCart() {
 
     cartItems.appendChild(cartItem);
 
-    // Update the number of items in the cart icon
     const cartCount = document.getElementById("cartCount");
     let count = parseInt(cartCount.innerText);
     cartCount.innerText = count + 1;
 
-    // Update the total
     const currentTotal = parseFloat(document.getElementById("cartTotal").innerText.replace("€", "").trim()) || 0;
     const newTotal = currentTotal + price;
     document.getElementById("cartTotal").innerText = `${newTotal.toFixed(2)}€`;
 
-    // Show the checkout button if it is hidden
     const checkoutBtn = document.getElementById("checkoutBtn");
     checkoutBtn.style.display = "block";
 
@@ -97,7 +93,6 @@ function addToCart() {
 }
 
 function checkout() {
-    // Show the payment success modal
     $('#paymentSuccessModal').modal('show');
 
     // Clear the cart
