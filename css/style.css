@@ -399,6 +399,7 @@ section {
     justify-content: center;
     margin-top: 0; 
     cursor: pointer;
+    position: relative; 
 }
 
 .product-card {
