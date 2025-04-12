@@ -90,6 +90,9 @@ function addToCart() {
     cartSidebar.classList.add('visible');
 
     $('#productModal').modal('hide');
+
+    console.log('Item added to cart:', { name, price, image, description });
+    console.log('Current cart total:', newTotal);
 }
 
 function checkout() {
@@ -102,4 +105,6 @@ function checkout() {
     document.getElementById("cartCount").innerText = "0";
 
     cartSidebar.classList.remove('visible');
+
+    console.log('Checkout completed');
 }
