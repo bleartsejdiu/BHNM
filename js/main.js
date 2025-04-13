@@ -47,9 +47,26 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function performSearch() {
-    var query = $('#searchInput').val();
-    if (query !== "") {
-        window.location.href = '/search?q=' + encodeURIComponent(query);
+    const query = $('#searchInput').val().toLowerCase().trim();
+
+    if (query === "") return;
+
+    let found = false;
+
+    document.querySelectorAll('.product-card').forEach(card => {
+        const name = card.getAttribute('data-name')?.toLowerCase() || "";
+        const description = card.getAttribute('data-description')?.toLowerCase() || "";
+        const price = card.getAttribute('data-price')?.toLowerCase() || "";
+
+        if (name.includes(query) || description.includes(query) || price.includes(query)) {
+            card.click();
+            found = true;
+            return false;
+        }
+    });
+
+    if (!found) {
+        alert("Product not found.");
     }
 }
 
@@ -87,7 +104,7 @@ function addToCart() {
     const checkoutBtn = document.getElementById("checkoutBtn");
     checkoutBtn.style.display = "block";
 
-    cartSidebar.classList.add('visible');
+    document.querySelector('.cart-sidebar').classList.add('visible');
 
     $('#productModal').modal('hide');
 
@@ -96,15 +113,83 @@ function addToCart() {
 }
 
 function checkout() {
-    $('#paymentSuccessModal').modal('show');
+    $('#checkoutModal').modal('show');
+}
+
+document.getElementById('checkoutBtn').onclick = function() {
+    checkout();
+};
+
+$('#paymentForm').submit(function(event) {
+    event.preventDefault();
+
+    let cardName = $('#cardName').val();
+    let cardNumber = $('#cardNumber').val().replace(/\s/g, '');
+    let expiryDate = $('#expiryDate').val();
+    let cvv = $('#cvv').val();
+
+    if (!/^\d{16}$/.test(cardNumber)) {
+        alert("The card number must have 16 digits.");
+        return;
+    }
+
+    if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
+        return;
+    }
+
+    if (!/^\d{3}$/.test(cvv)) {
+        return;
+    }
 
     // Clear the cart
-    document.getElementById("cartItems").innerHTML = "";
-    document.getElementById("cartTotal").innerText = "0.00€";
-    document.getElementById("checkoutBtn").style.display = "none";
-    document.getElementById("cartCount").innerText = "0";
+    clearCart();
 
-    cartSidebar.classList.remove('visible');
+    $('#paymentSuccessModal').modal('show');
+    $('#checkoutModal').modal('hide');
 
-    console.log('Checkout completed');
+    console.log("Payment has been made successfully!");
+});
+
+function clearCart() {
+    const cartItems = document.getElementById("cartItems");
+    cartItems.innerHTML = '';
+
+    const cartCount = document.getElementById("cartCount");
+    cartCount.innerText = '0';
+
+    const cartTotal = document.getElementById("cartTotal");
+    cartTotal.innerText = '0.00€';
+
+    const checkoutBtn = document.getElementById("checkoutBtn");
+    checkoutBtn.style.display = "none";
+
+    document.querySelector('.cart-sidebar').classList.remove('visible');
 }
+
+$('#cardNumber').on('input', function() {
+    let value = $(this).val().replace(/\D/g, '');
+    if (value.length > 16) {
+        value = value.slice(0, 16);
+    }
+    value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+    $(this).val(value);
+});
+
+$('#expiryDate').on('input', function() {
+    let value = $(this).val().replace(/\D/g, '');
+    if (value.length > 4) {
+        value = value.slice(0, 4);
+    }
+    if (value.length > 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2, 4);
+    }
+    $(this).val(value);
+});
+
+$('#cvv').on('input', function() {
+    let value = $(this).val().replace(/\D/g, '');
+    if (value.length > 3) {
+        value = value.slice(0, 3);
+    }
+    $(this).val(value);
+});
