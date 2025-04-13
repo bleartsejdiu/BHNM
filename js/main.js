@@ -193,3 +193,22 @@ $('#cvv').on('input', function() {
     }
     $(this).val(value);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    playPauseBtn.addEventListener('click', function () {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playPauseBtn.classList.add('playing');
+            playPauseBtn.classList.remove('paused');
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            backgroundMusic.pause();
+            playPauseBtn.classList.add('paused');
+            playPauseBtn.classList.remove('playing');
+            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    });
+});
