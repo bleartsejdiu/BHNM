@@ -38,7 +38,7 @@
   <div id="searchOverlay" class="search-overlay hidden">
     <div class="search-box">
       <input type="text" id="searchInput" class="form-control" placeholder="Search..." />
-      <button class="btn btn-primary" onclick="performSearch()"><i class="fas fa-search"></i></button>
+      <button class="btn btn-darker" onclick="performSearch()"><i class="fas fa-search"></i></button>
     </div>
   </div>
 
@@ -112,7 +112,7 @@
                 <h6>945.50€</h6>
                 <h5>915.50€</h5>
             </div>
-            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM STA #1 MENS" data-price="250.00€" data-image="img/bape9.png" data-description="Stylish Suicoke Sandals for men.">
+            <div class="product-card" data-toggle="modal" data-target="#productModal" data-name="BHNM X Suicoke Sandals" data-price="250.00€" data-image="img/bape9.png" data-description="Stylish Suicoke Sandals for men.">
                 <img src="img/bape9.png" >
                 <p>BHNM X Suicoke Sandals</p>
                 <h6>309.50€</h6>
@@ -212,7 +212,42 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Your payment was successful! Thank you for your purchase.</p>
+                <p>Your payment was successful! The order will arrive in 2 or 3 days.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-darker" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Payment Information</h5>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" class="form-control" id="cardName" placeholder="BHNM" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date (MM/YY)</label>
+                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" maxlength="5" pattern="\d{2}/\d{2}" title="Expiry date must be in MM/YY format" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="000" maxlength="3" pattern="\d{3}" title="CVV must be 3 digits" required>
+                    </div>
+                    <button type="submit" class="btn btn-darker">Submit Payment</button>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-darker" data-dismiss="modal">Close</button>
@@ -229,6 +264,7 @@
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-solid fa-x"></i>
 </footer>
+
 
 
 
