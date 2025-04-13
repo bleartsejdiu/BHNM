@@ -29,8 +29,6 @@ header {
     margin-bottom: -620px !important;
 }
 
-
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,7 +40,6 @@ nav {
     z-index: 1;
 
 }
-
 
 nav {
     display: flex;
@@ -63,6 +60,25 @@ nav a {
     color: white;
 }
 
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.play-pause-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 .icons {
     display: flex !important;
@@ -213,7 +229,6 @@ nav a {
       padding: 10px 16px;
       font-size: 18px;
 }
-
 
 .sidebar-menu {
     position: fixed !important;
@@ -505,8 +520,6 @@ section {
     background-color: #333;
     color: white;
 }
-
-
 
  .about-container {
     max-width: 1200px;
@@ -911,8 +924,6 @@ footer .f1 {
 
         }
 
-
-
         @media (max-width: 1024px) {
             .menu-toggle {
                 display: flex;
@@ -938,7 +949,6 @@ footer .f1 {
             order: 1 !important;
           }
         }
-
 
         @media (min-width: 1025px) {
             .menu-toggle {
@@ -988,36 +998,3 @@ footer .f1 {
              }
 
         }
-
-
-.audio-player {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: black;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    cursor: pointer;
-}
-
-.play-pause-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.play-pause-btn i {
-    transition: transform 0.3s ease;
-}
-
-.play-pause-btn.paused i {
-    transform: rotate(0deg);
-}
-
-.play-pause-btn.playing i {
-    transform: rotate(180deg);
-}
