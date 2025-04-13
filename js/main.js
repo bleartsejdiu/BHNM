@@ -1,3 +1,5 @@
+let cartTotalValue = 0;
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const sidebarMenu = document.querySelector('.sidebar-menu');
@@ -42,6 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#searchInput').keypress(function(e) {
         if (e.which === 13) {
             performSearch();
+        }
+    });
+
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    playPauseBtn.addEventListener('click', function () {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            playPauseBtn.classList.add('playing');
+            playPauseBtn.classList.remove('paused');
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            backgroundMusic.pause();
+            playPauseBtn.classList.add('paused');
+            playPauseBtn.classList.remove('playing');
+            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
         }
     });
 });
@@ -97,9 +116,8 @@ function addToCart() {
     let count = parseInt(cartCount.innerText);
     cartCount.innerText = count + 1;
 
-    const currentTotal = parseFloat(document.getElementById("cartTotal").innerText.replace("€", "").trim()) || 0;
-    const newTotal = currentTotal + price;
-    document.getElementById("cartTotal").innerText = `${newTotal.toFixed(2)}€`;
+    cartTotalValue += price;
+    document.getElementById("cartTotal").innerText = `${cartTotalValue.toFixed(2)}€`;
 
     const checkoutBtn = document.getElementById("checkoutBtn");
     checkoutBtn.style.display = "block";
@@ -109,7 +127,7 @@ function addToCart() {
     $('#productModal').modal('hide');
 
     console.log('Item added to cart:', { name, price, image, description });
-    console.log('Current cart total:', newTotal);
+    console.log('Current cart total:', cartTotalValue);
 }
 
 function checkout() {
@@ -141,7 +159,6 @@ $('#paymentForm').submit(function(event) {
         return;
     }
 
-    // Clear the cart
     clearCart();
 
     $('#paymentSuccessModal').modal('show');
@@ -159,6 +176,8 @@ function clearCart() {
 
     const cartTotal = document.getElementById("cartTotal");
     cartTotal.innerText = '0.00€';
+
+    cartTotalValue = 0; 
 
     const checkoutBtn = document.getElementById("checkoutBtn");
     checkoutBtn.style.display = "none";
@@ -192,23 +211,4 @@ $('#cvv').on('input', function() {
         value = value.slice(0, 3);
     }
     $(this).val(value);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    const backgroundMusic = document.getElementById('backgroundMusic');
-
-    playPauseBtn.addEventListener('click', function () {
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-            playPauseBtn.classList.add('playing');
-            playPauseBtn.classList.remove('paused');
-            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-        } else {
-            backgroundMusic.pause();
-            playPauseBtn.classList.add('paused');
-            playPauseBtn.classList.remove('playing');
-            playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-        }
-    });
 });
