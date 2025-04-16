@@ -744,31 +744,65 @@ input, textarea {
 }
 
 footer {
-    background-color: black !important;
-    color: white !important;
-    padding: 10px !important;
-    text-align: center !important;
-    display: flex !important;
-    justify-content: space-evenly !important;
-    align-items: center !important;
-    gap: 4px !important;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
 }
 
-footer i {
-    cursor: pointer !important;
-    font-size: 25px !important;
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-footer .f1 {
-    color: white;
-    text-decoration-style: none;
-    font-size: 65px;
+.footer-top .copyright {
+  margin: 0;
+  font-size: 18px;
 }
 
-.hr {
-    border-bottom: 1px solid black; 
-    width: 76%;
+.social-icons {
+  display: flex;
+  gap: 250px;
+  font-size: 25px;
 }
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.email {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.email button {
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.payment-methods img {
+    height: 40px;
+    object-fit: contain;
+}
+
 
 
 /*Responsive*/
@@ -877,6 +911,11 @@ footer .f1 {
                 .top-text h1 {
                     visibility:hidden;  
                   }
+
+                  .payment-methods img {
+                    height: 30px;
+                    object-fit: contain;
+                }
                 
             }
 
@@ -937,6 +976,30 @@ footer .f1 {
 
             .brand-logos img {
                  max-height: 30px;
+            }
+
+             .footer-top {
+                flex-direction: column;
+            }
+
+            .email {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .email input[type="email"] {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .payment-methods {
+                justify-content: center;
+            }
+
+            .social-icons {
+              display: flex;
+              gap: 50px;
+              font-size: 25px;
             }
 
             .hr {
