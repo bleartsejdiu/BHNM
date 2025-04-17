@@ -528,19 +528,19 @@ section {
 }
 
 .btn-darker {
-  background-color: black; 
-  color: white;
-  border: 1px solid black;
+  background-color: black !important; 
+  color: white!important;
+  border: 1px solid black!important;
 }
 
 .btn-darker:hover {
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
 }
 
 .btn-white {
-    background-color: #333;
-    color: white;
+    background-color: #333 !important;
+    color: white !important;
 }
 
  .about-container {
