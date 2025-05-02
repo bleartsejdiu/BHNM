@@ -18,7 +18,7 @@ header {
     position: relative !important;
     height: 100vh !important;
     overflow: hidden !important;
-    margin-bottom: -960px !important;
+    margin-bottom: -630px !important;
 
 }
 
@@ -26,7 +26,7 @@ header {
     position: relative !important;
     height: 100vh !important;
     overflow: hidden !important;
-    margin-bottom: -920px !important;
+    margin-bottom: -600px !important;
 }
 
 nav {
@@ -528,19 +528,19 @@ section {
 }
 
 .btn-darker {
-  background-color: black !important; 
-  color: white!important;
-  border: 1px solid black!important;
+  background-color: black; 
+  color: white;
+  border: 1px solid black;
 }
 
 .btn-darker:hover {
-  background-color: white !important;
-  color: black !important;
+  background-color: white;
+  color: black;
 }
 
 .btn-white {
-    background-color: #333 !important;
-    color: white !important;
+    background-color: #333;
+    color: white;
 }
 
  .about-container {
@@ -757,7 +757,7 @@ footer {
   align-items: center;
   gap: 90px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-top .copyright {
@@ -810,17 +810,17 @@ footer {
     @media (min-width: 230px) and (max-width:768px) {
 
             header{
-              margin-bottom: -460px !important;
+              margin-bottom: -530px !important;
 
             }
 
             .header1 {
-              margin-bottom: -450px !important;
+              margin-bottom: -600px !important;
 
             }
 
             .header2 {
-              margin-bottom: -550px !important;
+              margin-bottom: -730px !important;
 
             }
               .about-text h1 {
